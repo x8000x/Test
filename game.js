@@ -171,13 +171,7 @@ function updatePlayerPosition() {
 
 // Update UI stats
 function updateStats() {
-    document.getElementById('posX').textContent = Math.round(gameState.playerX);
-    document.getElementById('posY').textContent = Math.round(gameState.playerY);
-    document.getElementById('direction').textContent = gameState.direction.charAt(0).toUpperCase() + gameState.direction.slice(1);
-    
-    const distance = Math.sqrt(joystickX ** 2 + joystickY ** 2);
-    const displaySpeed = Math.round((distance / 50) * gameState.speed);
-    document.getElementById('speed').textContent = displaySpeed;
+    // Stats display removed
 }
 
 // Handle joystick input
