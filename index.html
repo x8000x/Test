@@ -138,11 +138,15 @@
         }
 
         #joystickContainer {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 120px;
-            height: 120px;
+            position: fixed;
+            bottom: 3vw;
+            left: 3vw;
+            width: 22vw;
+            height: 22vw;
+            max-width: 120px;
+            max-height: 120px;
+            min-width: 70px;
+            min-height: 70px;
             background: rgba(255, 255, 255, 0.15);
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
@@ -154,8 +158,8 @@
         }
 
         #joystickKnob {
-            width: 50px;
-            height: 50px;
+            width: 40%;
+            height: 40%;
             background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             position: absolute;
@@ -173,34 +177,44 @@
 
         @media (max-width: 768px) {
             #joystickContainer {
-                width: 100px;
-                height: 100px;
-                bottom: 15px;
-                left: 15px;
+                width: 20vw;
+                height: 20vw;
+                min-width: 60px;
+                min-height: 60px;
+                max-width: 100px;
+                max-height: 100px;
+                bottom: 3vw;
+                left: 3vw;
             }
 
             #joystickKnob {
-                width: 45px;
-                height: 45px;
+                width: 40%;
+                height: 40%;
             }
         }
 
         @media (max-width: 480px) {
             #joystickContainer {
-                width: 90px;
-                height: 90px;
-                bottom: 10px;
-                left: 10px;
+                width: 18vw;
+                height: 18vw;
+                min-width: 50px;
+                min-height: 50px;
+                max-width: 90px;
+                max-height: 90px;
+                bottom: 3vw;
+                left: 3vw;
             }
 
             #joystickKnob {
-                width: 40px;
-                height: 40px;
+                width: 40%;
+                height: 40%;
             }
 
             #player {
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                min-height: 50px;
             }
         }
     </style>
