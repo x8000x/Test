@@ -137,106 +137,76 @@
             animation: idle-right 0.8s linear infinite;
         }
 
-        /* Joystick Styles */
         #joystickContainer {
             position: absolute;
-            bottom: 40px;
-            left: 40px;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 3px solid rgba(255, 255, 255, 0.5);
+            bottom: 20px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             touch-action: none;
             user-select: none;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
         #joystickKnob {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             position: absolute;
             cursor: grab;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-        }
-
-        #joystickKnob::after {
-            content: '↑';
-            color: white;
-            font-weight: bold;
         }
 
         #joystickKnob.active {
-            box-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* UI Overlay */
-        #ui {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        #stats {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px 20px;
-            border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .stat-item {
-            margin: 5px 0;
-            font-size: 16px;
+            background: rgba(255, 255, 255, 0.6);
         }
 
         @media (max-width: 768px) {
             #joystickContainer {
-                width: 120px;
-                height: 120px;
-                bottom: 30px;
-                left: 30px;
+                width: 100px;
+                height: 100px;
+                bottom: 15px;
+                left: 15px;
             }
 
             #joystickKnob {
-                width: 60px;
-                height: 60px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #joystickContainer {
+                width: 90px;
+                height: 90px;
+                bottom: 10px;
+                left: 10px;
+            }
+
+            #joystickKnob {
+                width: 40px;
+                height: 40px;
+            }
+
+            #player {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
 </head>
 <body>
     <div id="gameContainer">
-        <div id="ui">
-            <h1 class="text-3xl font-bold mb-2">🎮 Sprite Game</h1>
-            <p class="text-lg">Use the joystick to move!</p>
-        </div>
-        
-        <div id="stats">
-            <div class="stat-item">Position: <span id="posX">0</span>, <span id="posY">0</span></div>
-            <div class="stat-item">Direction: <span id="direction">Idle</span></div>
-            <div class="stat-item">Speed: <span id="speed">0</span> px/s</div>
-        </div>
-
         <div id="player"></div>
 
         <div id="joystickContainer">
